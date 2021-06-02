@@ -1,0 +1,52 @@
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+div input:first-child{
+  width: 97%;
+  margin-left: 1%;
+}
+
+/* On screens that are 992px wide or less, go from four columns to two columns */
+@media screen and (max-width: 992px) {
+  .column {
+    width: 100%;
+  }
+}
+  
+/* On screens that are 720px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 720px) {
+  .column {
+    width: 20%;
+    font-size: 13px;
+  }
+  .active{
+      border-bottom: 3px solid black;
+  }
+}
+.categoryLabel{
+    position: absolute;
+    top: 4px;
+    right: 7px;
+    background: aquamarine;
+    padding: 0px 6px;
+    border-radius: 15px;
+    font-size: 10px;
+}
+.hrBackground{
+    background-color: #7fc4ff3d;
+}
+.technicalBackground{
+    background-color: #8a2be21a;
+}
+.financialBackground{
+    background-color: #7eab4d59;
+}
+.markertingBackground{
+    background-color: #b8860b30;
+}
+.active{
+    font-weight: bold;
+}

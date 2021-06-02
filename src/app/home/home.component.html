@@ -1,0 +1,21 @@
+<div class="row">
+    <div class="col-md-2 col-xl-2">            
+        <div class="column" *ngFor="let category of categories" [ngClass]="selectedCategory=== category ?'active':''">
+            <span  (click)="filterDocuments(category)">{{category}}</span>
+        </div>            
+    </div>
+    <div class="col-md-10 col-xl-10">
+
+        <input type="text" class="form-control" placeholder="Start typing document name..." [(ngModel)]="filterTerm">
+
+        <div class="card-container">
+            <div class="card" *ngFor="let document of documents | filter:filterTerm" >
+                <span [ngClass]="document.category === 'Marketing' ? 'categoryLabel markertingBackground' : (document.category === 'Financial' ? 'categoryLabel financialBackground' : (document.category === 'Technical' ? 'categoryLabel technicalBackground' :  (document.category === 'Human Resources' ? 'categoryLabel hrBackground' : 'categoryLabel')))">{{document.category}}</span>                  
+                <span 
+                >{{document.documentName}}</span>            
+            </div>
+                    
+        </div>
+    </div>
+</div>
+

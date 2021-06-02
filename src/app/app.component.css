@@ -1,0 +1,7 @@
+.header{
+    margin: 3% 0 3% 0;
+}
+.header p:first-child{
+    font-size: 19px;
+    font-weight: 700;
+}
